@@ -1,0 +1,307 @@
+/* Custom CSS for Premium Churn Prediction App */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Root Variables */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --dark-bg: #0e1117;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #b4b4b4;
+    --accent-purple: #667eea;
+    --accent-pink: #f093fb;
+}
+
+/* Global Styles */
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Main App Background */
+.stApp {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background-attachment: fixed;
+}
+
+/* Headers */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h1 {
+    font-size: 3rem !important;
+    margin-bottom: 0.5rem !important;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 2rem !important;
+    margin-top: 2rem !important;
+}
+
+h3 {
+    font-size: 1.5rem !important;
+}
+
+/* Glassmorphism Cards */
+.element-container div[data-testid="stMarkdownContainer"] {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.element-container div[data-testid="stMarkdownContainer"]:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+}
+
+/* Input Fields */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stSelectbox > div > div > select {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    color: var(--text-primary) !important;
+    padding: 0.75rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus,
+.stSelectbox > div > div > select:focus {
+    border-color: var(--accent-purple) !important;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Buttons */
+.stButton > button {
+    background: var(--primary-gradient) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* Download Button */
+.stDownloadButton > button {
+    background: var(--success-gradient) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stDownloadButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 25px rgba(79, 172, 254, 0.5) !important;
+}
+
+/* File Uploader */
+.stFileUploader {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 2px dashed rgba(255, 255, 255, 0.2) !important;
+    border-radius: 16px !important;
+    padding: 2rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.stFileUploader:hover {
+    border-color: var(--accent-purple) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Metrics */
+.stMetric {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 16px !important;
+    padding: 1.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.stMetric:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3) !important;
+}
+
+.stMetric label {
+    color: var(--text-secondary) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+}
+
+.stMetric div[data-testid="stMetricValue"] {
+    color: var(--text-primary) !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+}
+
+/* Success/Error Messages */
+.stSuccess {
+    background: rgba(79, 172, 254, 0.1) !important;
+    border-left: 4px solid #4facfe !important;
+    border-radius: 8px !important;
+    padding: 1rem !important;
+    animation: slideIn 0.3s ease !important;
+}
+
+.stError {
+    background: rgba(245, 87, 108, 0.1) !important;
+    border-left: 4px solid #f5576c !important;
+    border-radius: 8px !important;
+    padding: 1rem !important;
+    animation: slideIn 0.3s ease !important;
+}
+
+.stWarning {
+    background: rgba(255, 193, 7, 0.1) !important;
+    border-left: 4px solid #ffc107 !important;
+    border-radius: 8px !important;
+    padding: 1rem !important;
+    animation: slideIn 0.3s ease !important;
+}
+
+.stInfo {
+    background: rgba(102, 126, 234, 0.1) !important;
+    border-left: 4px solid #667eea !important;
+    border-radius: 8px !important;
+    padding: 1rem !important;
+    animation: slideIn 0.3s ease !important;
+}
+
+/* Dataframe */
+.stDataFrame {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Sidebar */
+.css-1d391kg, [data-testid="stSidebar"] {
+    background: linear-gradient(180deg, rgba(15, 12, 41, 0.95) 0%, rgba(48, 43, 99, 0.95) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-primary) !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background: var(--primary-gradient) !important;
+    color: white !important;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-top-color: var(--accent-purple) !important;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 12px !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+.streamlit-expanderHeader:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-gradient);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-gradient);
+}
+
+/* Plotly Charts */
+.js-plotly-plot {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+}

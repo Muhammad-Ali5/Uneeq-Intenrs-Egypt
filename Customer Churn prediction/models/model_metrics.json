@@ -1,0 +1,77 @@
+{
+  "best_model": "Logistic Regression",
+  "all_results": {
+    "Logistic Regression": {
+      "train_accuracy": 0.7413972888425443,
+      "test_accuracy": 0.625,
+      "precision": 0.2033898305084746,
+      "recall": 0.3,
+      "f1_score": 0.24242424242424246,
+      "roc_auc": 0.5199826388888888,
+      "confusion_matrix": [
+        [
+          339,
+          141
+        ],
+        [
+          84,
+          36
+        ]
+      ]
+    },
+    "Random Forest": {
+      "train_accuracy": 0.9350886339937435,
+      "test_accuracy": 0.685,
+      "precision": 0.224,
+      "recall": 0.23333333333333334,
+      "f1_score": 0.22857142857142856,
+      "roc_auc": 0.5660590277777777,
+      "confusion_matrix": [
+        [
+          383,
+          97
+        ],
+        [
+          92,
+          28
+        ]
+      ]
+    },
+    "XGBoost": {
+      "train_accuracy": 0.9960896767466111,
+      "test_accuracy": 0.69,
+      "precision": 0.18269230769230768,
+      "recall": 0.15833333333333333,
+      "f1_score": 0.16964285714285712,
+      "roc_auc": 0.5693055555555555,
+      "confusion_matrix": [
+        [
+          395,
+          85
+        ],
+        [
+          101,
+          19
+        ]
+      ]
+    },
+    "LightGBM": {
+      "train_accuracy": 0.9903545359749739,
+      "test_accuracy": 0.705,
+      "precision": 0.2336448598130841,
+      "recall": 0.20833333333333334,
+      "f1_score": 0.22026431718061673,
+      "roc_auc": 0.5622569444444445,
+      "confusion_matrix": [
+        [
+          398,
+          82
+        ],
+        [
+          95,
+          25
+        ]
+      ]
+    }
+  }
+}
